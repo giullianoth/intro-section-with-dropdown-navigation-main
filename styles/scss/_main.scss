@@ -1,0 +1,46 @@
+.main_presentation {
+    @include containerFull;
+    padding: 120px 0;
+
+    &_content {
+        @include container(1260px);
+        @include flex(center, center, nowrap);
+        column-gap: 160px;
+
+        &_info {
+            @include flexBasis(50%, 160px);
+            @include flex(flex-end, flex-start, nowrap);
+            flex-direction: column;
+            align-self: stretch;
+
+            &_title {
+                h2 {
+                    font-size: 4.2em;
+                    margin-bottom: 40px;
+                }
+            }
+
+            &_text {
+                line-height: 1.4;
+                margin-bottom: 40px;
+            }
+
+            &_cta {
+                @include btn;
+                font-size: 1.4em;
+                margin-bottom: 40px;
+            }
+
+            &_clients {
+                @include flex(flex-start, center, nowrap);
+                column-gap: 40px;
+
+                margin-top: 60px;
+            }
+        }
+
+        &_image {
+            @include flexBasis(50%, 160px);
+        }
+    }
+}

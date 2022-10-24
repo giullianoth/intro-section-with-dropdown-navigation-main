@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
@@ -10,12 +10,6 @@
 
   <script src="https://kit.fontawesome.com/fe0ca3f893.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles/css/style.css">
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <header class="main_header">
@@ -67,19 +61,19 @@
     </div>
   </header>
 
-  <main>
-    <div>
-      <section>
-        <header>
-          <h2>Make remote work</h2>
+  <main class="main_presentation">
+    <div class="main_presentation_content">
+      <section class="main_presentation_content_info">
+        <header class="main_presentation_content_info_title">
+          <h2><span>Make</span> <span>remote work</span></h2>
         </header>
 
-        <p>Get your team in sync, no matter your location. Streamline processes, 
+        <p class="main_presentation_content_info_text">Get your team in sync, no matter your location. Streamline processes, 
           create team rituals, and watch productivity soar.</p>
 
-        <a href="#">Learn more</a>
+        <a href="#" class="main_presentation_content_info_cta">Learn more</a>
 
-        <div>
+        <div class="main_presentation_content_info_clients">
           <a href="#"><img src="images/client-databiz.svg" alt="Databiz"></a>
           <a href="#"><img src="images/client-audiophile.svg" alt="Audiophile"></a>
           <a href="#"><img src="images/client-meet.svg" alt="Meet"></a>
@@ -87,7 +81,7 @@
         </div>
       </section>
 
-      <aside>
+      <aside class="main_presentation_content_image">
         <picture>
           <source media="(max-width: 600px)" srcset="images/image-hero-mobile.png">
           <img src="images/image-hero-desktop.png" alt="Featured banner">

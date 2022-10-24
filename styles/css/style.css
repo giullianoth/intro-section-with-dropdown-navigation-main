@@ -161,3 +161,72 @@ p {
   color: hsl(0deg, 0%, 8%);
   border-color: hsl(0deg, 0%, 8%);
 }
+
+.main_presentation {
+  width: 100%;
+  padding: 120px 0;
+}
+.main_presentation_content {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  column-gap: 160px;
+}
+.main_presentation_content_info {
+  flex-basis: calc(50% - 160px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-self: stretch;
+}
+.main_presentation_content_info_title h2 {
+  font-size: 4.2em;
+  margin-bottom: 40px;
+}
+.main_presentation_content_info_text {
+  line-height: 1.4;
+  margin-bottom: 40px;
+}
+.main_presentation_content_info_cta {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 98%);
+  border: 1px solid transparent;
+  border-radius: 16px;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  transition: all 0.3s ease 0s;
+  font-size: 1.4em;
+  margin-bottom: 40px;
+}
+.main_presentation_content_info_cta:hover {
+  background-color: transparent;
+  color: hsl(0deg, 0%, 8%);
+  border-color: hsl(0deg, 0%, 8%);
+}
+.main_presentation_content_info_clients {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  column-gap: 40px;
+  margin-top: 60px;
+}
+.main_presentation_content_image {
+  flex-basis: calc(50% - 160px);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
