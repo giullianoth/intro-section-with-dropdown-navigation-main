@@ -1,0 +1,27 @@
+// LAYOUT
+$layout-mobile:  375px;
+$layout-desktop: 1440px;
+
+// COLORS
+// Neutral
+$color-almost-white: hsl(0, 0%, 98%);
+$color-medium-gray:  hsl(0, 0%, 41%);
+$color-almost-black: hsl(0, 0%, 8%);
+
+// TIPOGRAPHY
+// Body Copy
+$font-size-paragraph: 18px;
+
+//Font
+$font-epilogue: 'Epilogue', sans-serif;
+
+// CONTAINER PAGE WIDTH
+$container-max-width: 1300px;
+
+// BROWSER CORES
+$browsers-default: ("moz", "webkit");
+
+// BORDER RADIUS
+$radius-default: 10px;
+$radius-small:   6px;
+$radius-big:     16px;

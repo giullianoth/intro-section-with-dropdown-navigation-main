@@ -1,0 +1,59 @@
+// CONTAINER WIDTH
+@mixin container($maxWidth: $container-max-width) {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@mixin containerFull() {
+    width: 100%;
+}
+
+// BROWSERS
+@mixin setBrowsers($attr, $value, $browsers: $browsers-default) {
+    #{$attr}: #{$value};
+
+    @each $browser in $browsers {
+        -#{$browser}-#{$attr}: #{$value};
+    }
+}
+
+// BORDER RADIUS
+@mixin borderRadius($radius: $radius-default) {
+    @include setBrowsers(border-radius, $radius);
+}
+
+@mixin rounded() {
+    @include borderRadius(50%);
+}
+
+// FLEXBOX
+@mixin flex($justifyContent: center, $alignitems: center, $flexWrap: wrap) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignitems;
+    flex-wrap: $flexWrap;
+}
+
+@mixin flexBasis($basis, $gap: 0) {
+    @if $gap != 0 {
+        flex-basis: calc($basis - $gap);
+    }
+
+    @else {
+        flex-basis: $basis;
+    }
+}
+
+// POSITION
+// Relative
+@mixin relative() {
+    position: relative;
+}
+
+// Absolute
+@mixin absolute($top: 0, $left: 0) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}

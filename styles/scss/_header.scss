@@ -1,0 +1,55 @@
+.main_header {
+    @include containerFull;
+
+    &_content {
+        @include container;
+        @include flex(flex-start, center, nowrap);
+        column-gap: 60px;
+
+        &_logo {
+            @include flexBasis(80px);
+
+            &_title {
+                display: none;
+            }
+
+            &_img {
+                @include containerFull;
+                display: block;
+                margin-top: 10px;
+            }
+        }
+
+        &_menu {
+            @include flexBasis(calc(100% - 80px - 300px));
+
+            li {
+                list-style: none;
+            }
+
+            &_primary {
+                @include flex(flex-start, stretch, nowrap);
+                column-gap: 40px;
+
+                &_item {
+                    color: $color-medium-gray;
+                    cursor: pointer;
+                    padding: 30px 0;
+                    display: inline-block;
+
+                    @include relative;
+                }
+            }
+
+            &_submenu {
+                @include absolute(100%);
+            }
+        }
+
+        &_login {
+            @include flexBasis(300px);
+            @include flex(flex-end);
+            column-gap: 20px;
+        }
+    }
+}
