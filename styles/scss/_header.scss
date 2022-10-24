@@ -37,19 +37,81 @@
                     padding: 30px 0;
                     display: inline-block;
 
+                    @include transition;
                     @include relative;
+
+                    &:hover {
+                        color: $color-almost-black;
+                    }
                 }
             }
 
             &_submenu {
+                display: none;
+                background-color: $color-almost-white;
+                padding: 20px;
+                z-index: 2;
+
+                width: 160px;
+
                 @include absolute(100%);
+                @include borderRadius;
+                @include boxShadow(0, 0, 18px);
+                @include transition;
+
+                &:nth-child(1) {
+                    left: unset;
+                    right: 0;
+                }
+
+                li {
+                    width: auto;
+
+                    a {
+                        display: block;
+                        color: $color-medium-gray;
+                        padding: 10px 0;
+                        @include containerFull;
+                        @include transition;
+
+                        &:hover {
+                            color: $color-almost-black;
+                        }
+
+                        i {
+                            margin-right: 10px;
+                        }
+                    }
+                }
             }
         }
 
         &_login {
             @include flexBasis(300px);
             @include flex(flex-end);
-            column-gap: 20px;
+            column-gap: 40px;
+
+            &_btn {
+                &_login {
+                    display: inline-block;
+                    color: $color-medium-gray;
+                    @include transition;
+
+                    &:hover {
+                        color: $color-almost-black;
+                    }
+                }
+
+                &_register {
+                    @include btnOutline;
+                    color: $color-medium-gray;
+                    border-color: $color-medium-gray;
+
+                    &:hover {
+                        @include outline;
+                    }
+                }
+            }
         }
     }
 }

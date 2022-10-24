@@ -36,7 +36,7 @@
 }
 
 @mixin flexBasis($basis, $gap: 0) {
-    @if $gap != 0 {
+    @if $gap !=0 {
         flex-basis: calc($basis - $gap);
     }
 
@@ -56,4 +56,49 @@
     position: absolute;
     top: $top;
     left: $left;
+}
+
+// TRANSITION
+@mixin transition($property: all, $duration: 0.3s, $timingFunction: ease, $delay: 0s) {
+    transition: $property $duration $timingFunction $delay;
+}
+
+// BOX SHADOW
+@mixin boxShadow($xOffset: 0, $yOffset: 0, $blur: 0, $spread: 0, $color: $color-shadow) {
+    box-shadow: $xOffset $yOffset $blur $spread $color;
+}
+
+// BUTTONS
+@mixin outline() {
+    background-color: transparent;
+    color: $color-almost-black;
+    border-color: $color-almost-black;
+}
+
+@mixin fill() {
+    background-color: $color-almost-black;
+    color: $color-almost-white;
+    border: 1px solid transparent;
+}
+
+@mixin btn() {
+    display: inline-block;
+    padding: 12px 24px;
+
+    @include fill;
+    @include borderRadius($radius-big);
+    @include transition;
+
+    &:hover {
+        @include outline;
+    }
+}
+
+@mixin btnOutline() {
+    @include btn;
+    @include outline;
+
+    &:hover {
+        @include fill;
+    }
 }
