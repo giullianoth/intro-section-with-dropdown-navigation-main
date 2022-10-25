@@ -168,7 +168,7 @@
                                 visibility: visible;
             
                                 @include setResponsiveDesign(900px) {
-                                    max-height: 200px;
+                                    max-height: 100vh;
                                     padding: {
                                         top: 20px;
                                         bottom: 20px;
@@ -197,7 +197,7 @@
                 @include absolute(50%);
                 @include borderRadius;
                 @include boxShadow(0, 0, 18px);
-                @include transition;
+                @include transition(all, 0.3s, linear);
 
                 @include setResponsiveDesign(900px) {
                     opacity: 1;
