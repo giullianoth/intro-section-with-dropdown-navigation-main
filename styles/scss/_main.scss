@@ -2,6 +2,13 @@
     @include containerFull;
     padding: 120px 0;
 
+    @include setResponsiveDesign(768px) {
+        padding: {
+            top: 0;
+            bottom: 80px;
+        };
+    }
+
     &_content {
         @include container(1260px);
         @include flex(center, center, nowrap);
@@ -14,6 +21,15 @@
         @include setResponsiveDesign(1024px) {
             column-gap: 40px;
             justify-content: space-between;
+        }
+
+        @include setResponsiveDesign(768px) {
+            column-gap: 0;
+            row-gap: 60px;
+            justify-content: center;
+            flex-direction: column-reverse;
+            @include container(500px);
+            padding: 0;
         }
 
         &_info {
@@ -30,16 +46,43 @@
                 @include flexBasis(50%, 40px);
             }
 
+            @include setResponsiveDesign(768px) {
+                text-align: center;
+                padding: 0 20px;
+            }
+
             &_title {
+                @include setResponsiveDesign(768px) {
+                    align-self: center;
+                }
+
                 h2 {
                     font-size: 4.2em;
                     margin-bottom: 40px;
+
+                    @include setResponsiveDesign(768px) {
+                        font-size: 3em;
+                    }
+
+                    @include setResponsiveDesign(480px) {
+                        font-size: 2.4em;
+                        margin-bottom: 20px;
+                    }
                 }
             }
 
             &_text {
                 line-height: 1.4;
                 margin-bottom: 40px;
+
+                @include setResponsiveDesign(768px) {
+                    font-size: 16px;
+                }
+
+                @include setResponsiveDesign(480px) {
+                    font-size: 14px;
+                    margin-bottom: 20px;
+                }
             }
 
             &_cta {
@@ -48,12 +91,21 @@
                 margin-bottom: 40px;
 
                 @include relative;
+
+                @include setResponsiveDesign(768px) {
+                    align-self: center;
+                    margin-bottom: 60px;
+                }
             }
 
             &_clients {
-                @include flex(flex-start, center, nowrap);
+                @include flex(space-between, center, nowrap);
                 column-gap: 40px;
                 margin-top: 60px;
+
+                @include setResponsiveDesign(768px) {
+                    margin: 0;
+                }
 
                 a {
                     @include transition;

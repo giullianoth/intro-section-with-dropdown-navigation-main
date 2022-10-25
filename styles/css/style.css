@@ -350,6 +350,12 @@ p {
   width: 100%;
   padding: 120px 0;
 }
+@media screen and (max-width: 768px) {
+  .main_presentation {
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+}
 .main_presentation_content {
   max-width: 1260px;
   margin: 0 auto;
@@ -371,6 +377,18 @@ p {
     justify-content: space-between;
   }
 }
+@media screen and (max-width: 768px) {
+  .main_presentation_content {
+    column-gap: 0;
+    row-gap: 60px;
+    justify-content: center;
+    flex-direction: column-reverse;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding: 0;
+  }
+}
 .main_presentation_content_info {
   flex-basis: calc(50% - 160px);
   display: flex;
@@ -390,13 +408,46 @@ p {
     flex-basis: calc(50% - 40px);
   }
 }
+@media screen and (max-width: 768px) {
+  .main_presentation_content_info {
+    text-align: center;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main_presentation_content_info_title {
+    align-self: center;
+  }
+}
 .main_presentation_content_info_title h2 {
   font-size: 4.2em;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 768px) {
+  .main_presentation_content_info_title h2 {
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main_presentation_content_info_title h2 {
+    font-size: 2.4em;
+    margin-bottom: 20px;
+  }
+}
 .main_presentation_content_info_text {
   line-height: 1.4;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .main_presentation_content_info_text {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main_presentation_content_info_text {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
 }
 .main_presentation_content_info_cta {
   display: inline-block;
@@ -418,13 +469,24 @@ p {
   color: hsl(0deg, 0%, 8%);
   border-color: hsl(0deg, 0%, 8%);
 }
+@media screen and (max-width: 768px) {
+  .main_presentation_content_info_cta {
+    align-self: center;
+    margin-bottom: 60px;
+  }
+}
 .main_presentation_content_info_clients {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
   column-gap: 40px;
   margin-top: 60px;
+}
+@media screen and (max-width: 768px) {
+  .main_presentation_content_info_clients {
+    margin: 0;
+  }
 }
 .main_presentation_content_info_clients a {
   transition: all 0.3s ease 0s;
