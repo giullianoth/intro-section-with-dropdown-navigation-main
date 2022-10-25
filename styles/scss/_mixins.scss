@@ -54,6 +54,13 @@
     left: $left;
 }
 
+// Fixed
+@mixin fixed($top: 0, $left: 0) {
+    position: fixed;
+    top: $top;
+    left: $left;
+}
+
 // TRANSITION
 @mixin transition($property: all, $duration: 0.3s, $timingFunction: ease, $delay: 0s) {
     transition: $property $duration $timingFunction $delay;
@@ -80,6 +87,7 @@
 @mixin btn() {
     display: inline-block;
     padding: 12px 24px;
+    font-weight: 700;
 
     @include fill;
     @include borderRadius($radius-big);
