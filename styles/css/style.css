@@ -353,7 +353,7 @@ p {
 @media screen and (max-width: 768px) {
   .main_presentation {
     padding-top: 0;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
   }
 }
 .main_presentation_content {
@@ -511,6 +511,7 @@ p {
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding: 20px 0;
 }
 .attribution a {
   color: hsl(228deg, 45%, 44%);
