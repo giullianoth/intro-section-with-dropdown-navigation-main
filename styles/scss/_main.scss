@@ -7,11 +7,28 @@
         @include flex(center, center, nowrap);
         column-gap: 160px;
 
+        @include setResponsiveDesign(1200px) {
+            column-gap: 80px;
+        }
+
+        @include setResponsiveDesign(1024px) {
+            column-gap: 40px;
+            justify-content: space-between;
+        }
+
         &_info {
             @include flexBasis(50%, 160px);
             @include flex(flex-end, flex-start, nowrap);
             flex-direction: column;
             align-self: stretch;
+
+            @include setResponsiveDesign(1200px) {
+                @include flexBasis(50%, 80px);
+            }
+
+            @include setResponsiveDesign(1024px) {
+                @include flexBasis(50%, 40px);
+            }
 
             &_title {
                 h2 {
@@ -29,18 +46,35 @@
                 @include btn;
                 font-size: 1.4em;
                 margin-bottom: 40px;
+
+                @include relative;
             }
 
             &_clients {
                 @include flex(flex-start, center, nowrap);
                 column-gap: 40px;
-
                 margin-top: 60px;
+
+                a {
+                    @include transition;
+
+                    &:hover {
+                        transform: translateY(-10px) scale(1.1);
+                    }
+                }
             }
         }
 
         &_image {
             @include flexBasis(50%, 160px);
+
+            @include setResponsiveDesign(1200px) {
+                @include flexBasis(50%, 80px);
+            }
+
+            @include setResponsiveDesign(1024px) {
+                @include flexBasis(50%, 40px);
+            }
         }
     }
 }

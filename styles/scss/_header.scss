@@ -6,6 +6,10 @@
         @include flex(flex-start, center, nowrap);
         column-gap: 60px;
 
+        @include setResponsiveDesign(1024px) {
+            column-gap: 40px;
+        }
+
         &_logo {
             @include flexBasis(80px);
 
@@ -47,21 +51,28 @@
             }
 
             &_submenu {
-                display: none;
-                background-color: $color-almost-white;
+                opacity: 0;
+                visibility: hidden;
+                
+                background-color: #FFF;
                 padding: 20px;
                 z-index: 2;
 
                 width: 160px;
 
-                @include absolute(100%);
+                @include absolute(50%);
                 @include borderRadius;
                 @include boxShadow(0, 0, 18px);
                 @include transition;
 
-                &:nth-child(1) {
-                    left: unset;
-                    right: 0;
+                &:first-child {
+                    background: red;
+                }
+
+                &.active {
+                    top: 100%;
+                    opacity: 1;
+                    visibility: visible;
                 }
 
                 li {
@@ -90,6 +101,11 @@
             @include flexBasis(300px);
             @include flex(flex-end);
             column-gap: 40px;
+
+            @include setResponsiveDesign(1024px) {
+                @include flexBasis(240px);
+                column-gap: 20px;
+            }
 
             &_btn {
                 &_login {
