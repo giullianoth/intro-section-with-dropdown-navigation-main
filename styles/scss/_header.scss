@@ -69,6 +69,7 @@
             }            
 
             &.active {
+
                 span {
                     background-color: transparent;
 
@@ -154,6 +155,32 @@
                     &:hover {
                         color: $color-almost-black;
                     }
+
+                    &.dropdown {
+                        &.active {
+                            & > i {
+                                transform: rotateX(180deg);
+                            }
+
+                            .main_header_content_menu_submenu {
+                                top: 100%;
+                                opacity: 1;
+                                visibility: visible;
+            
+                                @include setResponsiveDesign(900px) {
+                                    max-height: 200px;
+                                    padding: {
+                                        top: 20px;
+                                        bottom: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    i {
+                        @include transition;
+                    }
                 }
             }
 
@@ -172,14 +199,23 @@
                 @include boxShadow(0, 0, 18px);
                 @include transition;
 
-                &:first-child {
-                    background: red;
-                }
-
-                &.active {
-                    top: 100%;
+                @include setResponsiveDesign(900px) {
                     opacity: 1;
                     visibility: visible;
+                    position: static;
+                    box-shadow: none;
+                    background: none;
+                    width: auto;
+                    overflow: hidden;
+                    max-height: 0;
+                    padding: {
+                        top: 0;
+                        bottom: 0;
+                    }
+                }
+
+                &:first-child {
+                    background: red;
                 }
 
                 li {
