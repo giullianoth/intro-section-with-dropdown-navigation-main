@@ -1,41 +1,78 @@
 const timeAnimation = 600;
 
-const btnLink = document.querySelectorAll(".j_btn");
-
-const aboutPage = document.querySelector(".j_about");
-const mainPage = document.querySelector(".j_main");
+const btnPages = document.querySelectorAll(".j_btn");
 const featuredImage = document.querySelector(".j_featured_image img");
 
-const About = (page, position) => {
+const setPage = (url) => {
+
+    let { page, pagePosition } = {
+        page: "",
+        pagePosition: ""
+    }
+
+    switch (url) {
+        case "home":
+            page = document.querySelector(".j_main");
+            pagePosition = "left";
+            break;
+
+        case "about":
+            page = document.querySelector(".j_about");
+            pagePosition = "right";
+            break;
+
+        default:
+            return null;
+    }
+
+    return { page, pagePosition };
+}
+
+const openPage = (page, position) => {
     let positionClass = `out_${position}`;
 
-    if (page.classList.contains(positionClass)) {
-        page.classList.remove("no_display");
-        setTimeout(() => {
-            page.classList.remove(positionClass);
-        }, timeAnimation);
-    } else {
-        page.classList.add(positionClass);
-        setTimeout(() => {
-            page.classList.add("no_display");
-        }, timeAnimation);
+    page.classList.remove("no_display");
+
+    setTimeout(() => {
+        page.classList.remove(positionClass);
+    }, timeAnimation);
+}
+
+const closePage = (page, position) => {
+    let positionClass = `out_${position}`;
+
+    page.classList.add(positionClass);
+
+    setTimeout(() => {
+        page.classList.add("no_display");
+    }, timeAnimation);
+}
+
+const moveImage = (position) => {
+    if (!featuredImage.classList.contains("move") && position === "right") {
+        featuredImage.classList.add("move");
+    } else if (featuredImage.classList.contains("move") && position === "left") {
+        featuredImage.classList.remove("move");
     }
 }
 
 const pages = () => {
 
-    btnLink.forEach((btn) => {
+    btnPages.forEach((btn) => {
+
         btn.addEventListener("click", (event) => {
             event.preventDefault();
-            event.target.parentNode.classList.add("out_left");
+            let pageToOpen = setPage(btn.dataset.url);
+            let pageToClose = setPage(btn.parentNode.dataset.page);
 
+            closePage(pageToClose.page, pageToClose.pagePosition);
+            
             setTimeout(() => {
-                event.target.parentNode.classList.add("no_display");
-                featuredImage.classList.add("move");
-                About(aboutPage, "right");
+                moveImage(pageToOpen.pagePosition);
+                openPage(pageToOpen.page, pageToOpen.pagePosition);
             }, timeAnimation);
 
-            console.log(event.target.parentNode.classList);
+            console.log(featuredImage.classList.contains("move"));
         })
     })
 }
