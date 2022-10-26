@@ -59,16 +59,32 @@
                 transform: translateX(-100%);
                 opacity: 0;
                 visibility: hidden;
+
+                @include setResponsiveDesign(768px) {
+                    transform: translate(0, 30%);
+                }
             }
 
             &.out_right {
                 transform: translateX(200%) !important;
                 opacity: 0;
                 visibility: hidden;
+
+                @include setResponsiveDesign(768px) {
+                    transform: translate(0, 30%) !important;
+                }
             }
 
             &.img_moved {
                 transform: translateX(calc(100% + 160px));
+
+                @include setResponsiveDesign(1200px) {
+                    transform: translateX(calc(100% + 80px));
+                }
+
+                @include setResponsiveDesign(768px) {
+                    transform: translateX(0);
+                }
             }
 
             &.no_display {
@@ -153,6 +169,14 @@
 
                 &.move {
                     transform: translateX(calc(-100% - 160px));
+
+                    @include setResponsiveDesign(1200px) {
+                        transform: translateX(calc(-100% - 80px));
+                    }
+
+                    @include setResponsiveDesign(768px) {
+                        transform: translateX(0);
+                    }
                 }
             }
 

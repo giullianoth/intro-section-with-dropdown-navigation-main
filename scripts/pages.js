@@ -71,8 +71,6 @@ const pages = () => {
                 moveImage(pageToOpen.pagePosition);
                 openPage(pageToOpen.page, pageToOpen.pagePosition);
             }, timeAnimation);
-
-            console.log(featuredImage.classList.contains("move"));
         })
     })
 }
