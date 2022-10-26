@@ -392,7 +392,7 @@ p {
     padding: 0;
   }
 }
-.main_presentation_content_info, .main_presentation_content_about {
+.main_presentation_content_info, .main_presentation_content_about, .main_presentation_content_carrers {
   flex-basis: calc(50% - 160px);
   display: flex;
   justify-content: flex-end;
@@ -402,93 +402,99 @@ p {
   transition: all 0.6s ease 0s;
 }
 @media screen and (max-width: 1200px) {
-  .main_presentation_content_info, .main_presentation_content_about {
+  .main_presentation_content_info, .main_presentation_content_about, .main_presentation_content_carrers {
     flex-basis: calc(50% - 80px);
   }
 }
 @media screen and (max-width: 1024px) {
-  .main_presentation_content_info, .main_presentation_content_about {
+  .main_presentation_content_info, .main_presentation_content_about, .main_presentation_content_carrers {
     flex-basis: calc(50% - 40px);
   }
 }
 @media screen and (max-width: 768px) {
-  .main_presentation_content_info, .main_presentation_content_about {
+  .main_presentation_content_info, .main_presentation_content_about, .main_presentation_content_carrers {
     text-align: center;
     padding: 0 20px;
   }
 }
-.main_presentation_content_info.out_left, .main_presentation_content_about.out_left {
+.main_presentation_content_info.out_left, .main_presentation_content_about.out_left, .main_presentation_content_carrers.out_left {
   transform: translateX(-100%);
   opacity: 0;
   visibility: hidden;
 }
 @media screen and (max-width: 768px) {
-  .main_presentation_content_info.out_left, .main_presentation_content_about.out_left {
+  .main_presentation_content_info.out_left, .main_presentation_content_about.out_left, .main_presentation_content_carrers.out_left {
     transform: translate(0, 30%);
   }
 }
-.main_presentation_content_info.out_right, .main_presentation_content_about.out_right {
+.main_presentation_content_info.out_right, .main_presentation_content_about.out_right, .main_presentation_content_carrers.out_right {
   transform: translateX(200%) !important;
   opacity: 0;
   visibility: hidden;
 }
 @media screen and (max-width: 768px) {
-  .main_presentation_content_info.out_right, .main_presentation_content_about.out_right {
+  .main_presentation_content_info.out_right, .main_presentation_content_about.out_right, .main_presentation_content_carrers.out_right {
     transform: translate(0, 30%) !important;
   }
 }
-.main_presentation_content_info.img_moved, .main_presentation_content_about.img_moved {
+.main_presentation_content_info.img_moved, .main_presentation_content_about.img_moved, .main_presentation_content_carrers.img_moved {
   transform: translateX(calc(100% + 160px));
 }
 @media screen and (max-width: 1200px) {
-  .main_presentation_content_info.img_moved, .main_presentation_content_about.img_moved {
+  .main_presentation_content_info.img_moved, .main_presentation_content_about.img_moved, .main_presentation_content_carrers.img_moved {
     transform: translateX(calc(100% + 80px));
   }
 }
 @media screen and (max-width: 768px) {
-  .main_presentation_content_info.img_moved, .main_presentation_content_about.img_moved {
+  .main_presentation_content_info.img_moved, .main_presentation_content_about.img_moved, .main_presentation_content_carrers.img_moved {
     transform: translateX(0);
   }
 }
-.main_presentation_content_info.no_display, .main_presentation_content_about.no_display {
+.main_presentation_content_info.no_display, .main_presentation_content_about.no_display, .main_presentation_content_carrers.no_display {
   display: none !important;
 }
 @media screen and (max-width: 768px) {
-  .main_presentation_content_info_title, .main_presentation_content_about_title {
+  .main_presentation_content_info_title, .main_presentation_content_about_title, .main_presentation_content_carrers_title {
     align-self: center;
   }
 }
-.main_presentation_content_info_title h2, .main_presentation_content_about_title h2 {
+.main_presentation_content_info_title h2, .main_presentation_content_about_title h2, .main_presentation_content_carrers_title h2 {
   font-size: 4.2em;
   margin-bottom: 40px;
 }
 @media screen and (max-width: 768px) {
-  .main_presentation_content_info_title h2, .main_presentation_content_about_title h2 {
+  .main_presentation_content_info_title h2, .main_presentation_content_about_title h2, .main_presentation_content_carrers_title h2 {
     font-size: 3em;
   }
 }
 @media screen and (max-width: 480px) {
-  .main_presentation_content_info_title h2, .main_presentation_content_about_title h2 {
+  .main_presentation_content_info_title h2, .main_presentation_content_about_title h2, .main_presentation_content_carrers_title h2 {
     font-size: 2.4em;
     margin-bottom: 20px;
   }
 }
-.main_presentation_content_info_text, .main_presentation_content_about_text {
+.main_presentation_content_info_text, .main_presentation_content_about_text, .main_presentation_content_carrers_text {
   line-height: 1.4;
   margin-bottom: 40px;
 }
 @media screen and (max-width: 768px) {
-  .main_presentation_content_info_text, .main_presentation_content_about_text {
+  .main_presentation_content_info_text, .main_presentation_content_about_text, .main_presentation_content_carrers_text {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 480px) {
-  .main_presentation_content_info_text, .main_presentation_content_about_text {
+  .main_presentation_content_info_text, .main_presentation_content_about_text, .main_presentation_content_carrers_text {
     font-size: 14px;
     margin-bottom: 20px;
   }
 }
-.main_presentation_content_info_cta, .main_presentation_content_about_cta {
+.main_presentation_content_info_text li, .main_presentation_content_about_text li, .main_presentation_content_carrers_text li {
+  margin-bottom: 40px;
+  margin-left: 2em;
+  font-size: 1.2em;
+  line-height: 0;
+}
+.main_presentation_content_info_cta, .main_presentation_content_about_cta, .main_presentation_content_carrers_cta {
   display: inline-block;
   padding: 12px 24px;
   font-weight: 700;
@@ -503,18 +509,18 @@ p {
   margin-bottom: 40px;
   position: relative;
 }
-.main_presentation_content_info_cta:hover, .main_presentation_content_about_cta:hover {
+.main_presentation_content_info_cta:hover, .main_presentation_content_about_cta:hover, .main_presentation_content_carrers_cta:hover {
   background-color: transparent;
   color: hsl(0deg, 0%, 8%);
   border-color: hsl(0deg, 0%, 8%);
 }
 @media screen and (max-width: 768px) {
-  .main_presentation_content_info_cta, .main_presentation_content_about_cta {
+  .main_presentation_content_info_cta, .main_presentation_content_about_cta, .main_presentation_content_carrers_cta {
     align-self: center;
     margin-bottom: 60px;
   }
 }
-.main_presentation_content_info_clients, .main_presentation_content_about_clients {
+.main_presentation_content_info_clients, .main_presentation_content_about_clients, .main_presentation_content_carrers_clients {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -523,14 +529,14 @@ p {
   margin-top: 60px;
 }
 @media screen and (max-width: 768px) {
-  .main_presentation_content_info_clients, .main_presentation_content_about_clients {
+  .main_presentation_content_info_clients, .main_presentation_content_about_clients, .main_presentation_content_carrers_clients {
     margin: 0;
   }
 }
-.main_presentation_content_info_clients a, .main_presentation_content_about_clients a {
+.main_presentation_content_info_clients a, .main_presentation_content_about_clients a, .main_presentation_content_carrers_clients a {
   transition: all 0.3s ease 0s;
 }
-.main_presentation_content_info_clients a:hover, .main_presentation_content_about_clients a:hover {
+.main_presentation_content_info_clients a:hover, .main_presentation_content_about_clients a:hover, .main_presentation_content_carrers_clients a:hover {
   transform: translateY(-10px) scale(1.1);
 }
 .main_presentation_content_info {

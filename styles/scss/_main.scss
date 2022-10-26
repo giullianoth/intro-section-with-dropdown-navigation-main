@@ -36,7 +36,9 @@
             padding: 0;
         }
 
-        &_info, &_about {
+        &_info,
+        &_about,
+        &_carrers {
             @include flexBasis(50%, 160px);
             @include flex(flex-end, flex-start, nowrap);
             flex-direction: column;
@@ -122,6 +124,15 @@
                 @include setResponsiveDesign(480px) {
                     font-size: 14px;
                     margin-bottom: 20px;
+                }
+
+                li {
+                    margin: {
+                        bottom: 40px;
+                        left: 2em;
+                    }
+                    font-size: 1.2em;
+                    line-height: 0;
                 }
             }
 

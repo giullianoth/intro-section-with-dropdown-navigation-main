@@ -2,6 +2,8 @@ const timeAnimation = 600;
 
 const btnPages = document.querySelectorAll(".j_btn");
 const featuredImage = document.querySelector(".j_featured_image img");
+const pageContents = document.querySelectorAll("section");
+const menuHambIcon = document.querySelector(".j_menu_hamb_icon");
 
 const setPage = (url) => {
 
@@ -18,6 +20,11 @@ const setPage = (url) => {
 
         case "about":
             page = document.querySelector(".j_about");
+            pagePosition = "right";
+            break;
+
+        case "carrers":
+            page = document.querySelector(".j_carrers");
             pagePosition = "right";
             break;
 
@@ -65,12 +72,22 @@ const pages = () => {
             let pageToOpen = setPage(btn.dataset.url);
             let pageToClose = setPage(btn.parentNode.dataset.page);
 
-            closePage(pageToClose.page, pageToClose.pagePosition);
-            
-            setTimeout(() => {
-                moveImage(pageToOpen.pagePosition);
-                openPage(pageToOpen.page, pageToOpen.pagePosition);
-            }, timeAnimation);
+            pageContents.forEach((content) => {
+                if (window.getComputedStyle(content).display !== "none") {
+                    pageToClose = setPage(content.dataset.page);
+                }
+            })
+
+            if (pageToClose.page != pageToOpen.page) {
+                closePage(pageToClose.page, pageToClose.pagePosition);
+
+                setTimeout(() => {
+                    moveImage(pageToOpen.pagePosition);
+                    openPage(pageToOpen.page, pageToOpen.pagePosition);
+                }, timeAnimation);
+            }
+
+            menuHambIcon.classList.remove("active");
         })
     })
 }
