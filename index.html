@@ -59,7 +59,7 @@
 
         <div class="main_header_content_menu_login">
           <a href="#" class="main_header_content_menu_login_btn_login j_btn j_menu_item" data-url="login">Login</a>
-          <a href="#" class="main_header_content_menu_login_btn_register">Register</a>
+          <a href="#" class="main_header_content_menu_login_btn_register j_btn j_menu_item" data-url="register">Register</a>
         </div>
       </nav>
     </div>
@@ -118,12 +118,12 @@
         </header>
         <form action="" class="main_presentation_content_login_text">
           <label for="email_login">
-            Enter your email:
+            Your email:
             <input type="email" name="email_login" id="email_login">
           </label>
 
-          <label for="email_login">
-            Enter your password:
+          <label for="password_login">
+            Your password:
             <input type="password" name="password_login" id="password_login">
           </label>
 
@@ -136,7 +136,42 @@
 
         <p class="main_presentation_content_login_text forgot">
           <a href="#">Forgot password</a>
-          <a href="#">Create an account</a>
+          <a href="#" class="j_btn" data-url="register">Create an account</a>
+        </p>
+
+        <a href="#" class="main_presentation_content_info_cta j_btn" data-url="home"><i class="fa-solid fa-angles-left"></i> Back</a>
+      </section>
+
+      <section class="main_presentation_content_register j_register img_moved out_right no_display" data-page="register">
+        <header class="main_presentation_content_register_title">
+          <h2 class="title_small">Create an account</h2>
+        </header>
+        <form action="" class="main_presentation_content_register_text">
+          <label for="name_register">
+            Your name:
+            <input type="text" name="name_register" id="name_register">
+          </label>
+
+          <label for="email_register">
+            Your email:
+            <input type="email" name="email_register" id="email_register">
+          </label>
+
+          <label for="password_register">
+            Your password:
+            <input type="password" name="password_register" id="password_register">
+          </label>
+
+          <label for="password_repeat_register">
+            Repeat password:
+            <input type="password" name="password_repeat_register" id="password_repeat_register">
+          </label>
+
+          <button type="submit">Register</button>
+        </form>
+
+        <p class="main_presentation_content_register_text forgot">
+          <a href="#" class="j_btn" data-url="login">Sign In</a>
         </p>
 
         <a href="#" class="main_presentation_content_info_cta j_btn" data-url="home"><i class="fa-solid fa-angles-left"></i> Back</a>

@@ -39,7 +39,8 @@
         &_info,
         &_about,
         &_carrers,
-        &_login {
+        &_login,
+        &_register {
             @include flexBasis(50%, 160px);
             @include flex(flex-end, flex-start, nowrap);
             flex-direction: column;

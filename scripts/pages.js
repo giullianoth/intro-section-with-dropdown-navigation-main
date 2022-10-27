@@ -33,6 +33,11 @@ const setPage = (url) => {
             pagePosition = "right";
             break;
 
+            case "register":
+                page = document.querySelector(".j_register");
+                pagePosition = "right";
+                break;
+
         default:
             return null;
     }
