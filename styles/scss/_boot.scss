@@ -28,3 +28,18 @@ img {
 p {
     font-size: $font-size-paragraph;
 }
+
+input {
+    @include outline;
+    border-width: 1px;
+    padding: 12px;
+    font-family: inherit;
+    outline: none;
+    display: inline-block;
+
+    @include borderRadius($radius-big);
+}
+
+button {
+    @include btn;
+}

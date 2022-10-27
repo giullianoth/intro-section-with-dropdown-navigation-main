@@ -28,6 +28,11 @@ const setPage = (url) => {
             pagePosition = "right";
             break;
 
+        case "login":
+            page = document.querySelector(".j_login");
+            pagePosition = "right";
+            break;
+
         default:
             return null;
     }

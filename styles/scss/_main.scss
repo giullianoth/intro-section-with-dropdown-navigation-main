@@ -38,7 +38,8 @@
 
         &_info,
         &_about,
-        &_carrers {
+        &_carrers,
+        &_login {
             @include flexBasis(50%, 160px);
             @include flex(flex-end, flex-start, nowrap);
             flex-direction: column;
@@ -93,6 +94,27 @@
                 display: none !important;
             }
 
+            form {
+                @include containerFull;
+                @include flex(center, flex-start, nowrap);
+                flex-direction: column;
+                gap: 20px;
+
+                * {
+                    @include flexBasis(100%);
+                }
+
+                input:not([type="checkbox"]), button, label {
+                    @include containerFull;
+                }
+
+                label {
+                    @include setResponsiveDesign(768px) {
+                        text-align: left;
+                    }
+                }
+            }
+
             &_title {
                 @include setResponsiveDesign(768px) {
                     align-self: center;
@@ -110,6 +132,10 @@
                         font-size: 2.4em;
                         margin-bottom: 20px;
                     }
+
+                    &.title_small {
+                        font-size: 3em;
+                    }
                 }
             }
 
@@ -126,6 +152,25 @@
                     margin-bottom: 20px;
                 }
 
+                &.forgot {
+                    @include flex;
+                    @include containerFull;
+                    gap: 10px;
+                    
+                    a {
+                        display: block;
+                        @include flexBasis(100%);
+                        text-align: center;
+                        font-size: 0.8em;
+                        color: $color-medium-gray;
+                        @include transition;
+
+                        &:hover {
+                            color:$color-almost-black;
+                        }
+                    }
+                }
+
                 li {
                     margin: {
                         bottom: 40px;
@@ -136,17 +181,20 @@
                 }
             }
 
+            ul, ol {
+                @include setResponsiveDesign(768px) {
+                    text-align: left;
+                }
+            }
+
             &_cta {
                 @include btn;
                 font-size: 1.4em;
-                margin-bottom: 40px;
 
                 @include relative;
 
                 @include setResponsiveDesign(768px) {
-                    align-self: center;
-                    margin-bottom: 60px;
-                }
+                    align-self: center;                }
             }
 
             &_clients {
@@ -170,6 +218,10 @@
 
         &_info {
             align-self: stretch;
+            
+            .main_presentation_content_info_cta {
+                margin-bottom: 40px;
+            }
         }
 
         &_image {
