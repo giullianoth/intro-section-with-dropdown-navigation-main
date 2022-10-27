@@ -11,7 +11,6 @@ const menu = () => {
         item.addEventListener("click", (event) => {
             event.preventDefault();
             item.classList.toggle("active");
-            console.log(event.target);
         })
     })
 }
