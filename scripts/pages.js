@@ -23,6 +23,11 @@ const setPage = (url) => {
             pagePosition = "left";
             break;
 
+            case "team":
+                page = document.querySelector(".j_team");
+                pagePosition = "left";
+                break;
+
         case "about":
             page = document.querySelector(".j_about");
             pagePosition = "right";

@@ -38,6 +38,7 @@
 
         &_info,
         &_history,
+        &_team,
         &_about,
         &_carrers,
         &_login,
@@ -144,6 +145,55 @@
             &_text {
                 line-height: 1.4;
                 margin-bottom: 40px;
+
+                &.team_list {
+                    @include flex(flex-start, flex-start, nowrap);
+                    column-gap: 40px;
+                    padding-bottom: 20px;
+                    cursor: pointer;
+                    @include transition;
+                    border-bottom: 1px solid transparent;
+
+                    &:hover {
+                        color: $color-almost-black;
+                        border-color: $color-medium-gray;
+
+                        .img img {
+                            transform: scale(1.2);
+                        }
+                    }
+
+                    .img {
+                        @include flexBasis(140px, 40px);
+                        width: calc(140px - 40px);
+                        height: calc(140px - 40px);
+
+                        @include borderRadius(50%);
+                        border: 3px solid $color-almost-black;
+                        overflow: hidden;
+
+                        img {
+                            @include transition;
+                        }
+                    }
+
+                    header {
+                        @include flexBasis(calc(100% - 140px), 40px);
+
+                        @include setResponsiveDesign(768px) {
+                            text-align: left;
+                        }
+
+                        h3 {
+                            font-size: 1.6em;
+                            margin-bottom: 3px;
+                        }
+
+                        p {
+                            font-size: 0.9em;
+                        }
+                    }
+                }
 
                 @include setResponsiveDesign(768px) {
                     font-size: 16px;
