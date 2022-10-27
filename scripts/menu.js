@@ -7,6 +7,9 @@ const menu = () => {
         menuHambIcon.classList.toggle("active");
     })
 
+    dropdown[0].querySelector(".j_submenu").style.left = "unset";
+    dropdown[0].querySelector(".j_submenu").style.right = "0";
+
     dropdown.forEach((item) => {
         item.addEventListener("click", (event) => {
             event.preventDefault();

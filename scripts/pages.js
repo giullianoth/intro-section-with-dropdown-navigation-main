@@ -18,6 +18,11 @@ const setPage = (url) => {
             pagePosition = "left";
             break;
 
+        case "history":
+            page = document.querySelector(".j_history");
+            pagePosition = "left";
+            break;
+
         case "about":
             page = document.querySelector(".j_about");
             pagePosition = "right";
@@ -33,10 +38,10 @@ const setPage = (url) => {
             pagePosition = "right";
             break;
 
-            case "register":
-                page = document.querySelector(".j_register");
-                pagePosition = "right";
-                break;
+        case "register":
+            page = document.querySelector(".j_register");
+            pagePosition = "right";
+            break;
 
         default:
             return null;
