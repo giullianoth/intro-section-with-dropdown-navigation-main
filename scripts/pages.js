@@ -12,6 +12,10 @@ const setPage = (url) => {
         pagePosition: ""
     }
 
+    if (url === "" || url == null) {
+        return null;
+    }
+
     switch (url) {
         case "home":
             page = document.querySelector(".j_main");
@@ -23,10 +27,15 @@ const setPage = (url) => {
             pagePosition = "left";
             break;
 
-            case "team":
-                page = document.querySelector(".j_team");
-                pagePosition = "left";
-                break;
+        case "team":
+            page = document.querySelector(".j_team");
+            pagePosition = "left";
+            break;
+
+        case "blog":
+            page = document.querySelector(".j_blog");
+            pagePosition = "left";
+            break;
 
         case "about":
             page = document.querySelector(".j_about");
@@ -98,13 +107,17 @@ const pages = () => {
                 }
             })
 
-            if (pageToClose.page != pageToOpen.page) {
-                closePage(pageToClose.page, pageToClose.pagePosition);
-
-                setTimeout(() => {
-                    moveImage(pageToOpen.pagePosition);
-                    openPage(pageToOpen.page, pageToOpen.pagePosition);
-                }, timeAnimation);
+            if (!pageToOpen || !pageToClose) {
+                console.error("Page doesn't exist");
+            } else {
+                if (pageToClose.page != pageToOpen.page) {
+                    closePage(pageToClose.page, pageToClose.pagePosition);
+    
+                    setTimeout(() => {
+                        moveImage(pageToOpen.pagePosition);
+                        openPage(pageToOpen.page, pageToOpen.pagePosition);
+                    }, timeAnimation);
+                }
             }
 
             menuHambIcon.classList.remove("active");
