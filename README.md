@@ -1,4 +1,4 @@
-# Intro section with dropdown navigation
+# Landing Page com dropdown e navegação animada
 
 Este é um desafio do [Frontend Mentor](https://www.frontendmentor.io) que consiste em uma landing page responsiva com animações de navegação entre uma página e outra, além de menus no estilo dropdown.
 
