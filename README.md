@@ -2,6 +2,8 @@
 
 Este é um desafio do [Frontend Mentor](https://www.frontendmentor.io) que consiste em uma landing page responsiva com animações de navegação entre uma página e outra, além de menus no estilo dropdown.
 
+(*Algumas páginas ainda não estão implementadas.*)
+
 ## Layout
 
 ![Captura de tela em 1440px - Desktop](images/screenshots/screenshot-1440px.png)
